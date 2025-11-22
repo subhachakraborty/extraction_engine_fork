@@ -13,6 +13,7 @@ minio
 #
 # # File handling
 aiofiles
+ruff
 #
 # # OCR & PDF Extraction
 # pytesseract
