@@ -36,4 +36,9 @@ docker compose up --build # Build & start all the services
 docker compose down # Stop the services
 ```
 
+### Docs
+```bash
+http://127.0.0.1:8000/docs/ # swagger api docs
+```
+
 ![Architecture](./assests/images/architecture.png)
