@@ -96,8 +96,6 @@ async def upload(
     Return the job id to the user and consume it for queue
     """
     job_id = uuid4().hex  # Generate the unique job_id
-
-    meta_coll = request.app.state.meta_coll
     jobs_coll = request.app.state.jobs_coll
     await jobs_coll.insert_one(
         {
@@ -125,7 +123,6 @@ async def process_upload_job(
     file: UploadFile = File(...),
     uploader: str | None = Form(None),
 ):
-
     minio_client = request.app.state.minio_client
     meta_coll = request.app.state.meta_coll
     jobs_coll = request.app.state.jobs_coll
